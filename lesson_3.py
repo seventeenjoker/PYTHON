@@ -66,8 +66,10 @@ def my_func(x, y):
 
 
 def my_func_special(x, y):
+    if y < 0:
+        x = 1 / x
     new_x = x
-    for i in range(1, y):
+    for i in range(1, abs(y)):
         new_x *= x
     return new_x
 
