@@ -95,7 +95,7 @@ summ = 0
 checker = True
 while checker:
     str = input("Введите строку чисел: ")
-    list_num = str.split(" ")
+    list_num = str.split()
     for i in list_num:
         if i.isnumeric():
             summ += int(i)

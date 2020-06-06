@@ -11,7 +11,14 @@ script_name, hours, salary_per_hour, bonus = argv
 """
 print("*" * 50 + " 1 " + "*" * 50)
 
-print(f"Расчет заработной платы: {int(hours) * int(salary_per_hour) + int(bonus)}")
+try:
+    hours = int(hours)
+    salary_per_hour = int(salary_per_hour)
+    bonus = int(bonus)
+    print(f"Расчет заработной платы: {hours * salary_per_hour + bonus}")
+except ValueError:
+    print("Введите корректные данные для вычислений.")
+
 
 # 2.
 """
@@ -49,6 +56,7 @@ print("*" * 50 + " 4 " + "*" * 50)
 list_num = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
 list_new = print([num for num in list_num if list_num.count(num) == 1])
 
+
 # 5.
 """
 Реализовать формирование списка, используя функцию range() и возможности генератора.
@@ -59,7 +67,7 @@ list_new = print([num for num in list_num if list_num.count(num) == 1])
 print("*" * 50 + " 5 " + "*" * 50)
 
 list_new = [num for num in range(100, 1001) if num % 2 == 0]
-print(reduce(lambda a, b: a + b, list_new))
+print(reduce(lambda a, b: a * b, list_new))
 
 # 6.
 """
