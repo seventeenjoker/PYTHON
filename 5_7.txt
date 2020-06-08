@@ -1,0 +1,3 @@
+OOO 'Horns and hooves';50000;20000
+OOO 'Polovtsy and Pechenegs';100000;23000
+OOO 'Chamomile';55000;5000
