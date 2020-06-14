@@ -124,10 +124,11 @@ with open('5_6.txt', 'r', encoding='utf-8') as file_6:
     for line in file_6:
         sum = 0
         for i in range(1, 4):
+            line_new = 0
             try:
-                int(line.split()[i])
-                sum += int(line.split()[i])
-            except ValueError:
+                line_new = line.split()[i].split("(")
+                sum += int(line_new[0])
+            except (ValueError, TypeError):
                 pass
         lessons_dict[line.split()[0]] = sum
 
